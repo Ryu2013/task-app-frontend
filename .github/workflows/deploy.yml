@@ -22,6 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Debug Variable
+        run: echo "変数の値は [ ${{ vars.VITE_API_URL }} ] です"
+
       - name: Build
         run: npm run build
         env:
