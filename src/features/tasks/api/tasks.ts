@@ -1,6 +1,12 @@
 import type { Task, CreateTaskDto, UpdateTaskDto } from '../types';
 
-const API_URL = '/api/tasks';
+// 環境変数 (例: http://12.34.56.78:3000)
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
+// ここで /api を挟む必要があります
+const API_URL = `${BASE_URL}/api/tasks`; 
+
+// 結果: http://12.34.56.78:3000/api/tasks となる
 
 export const getTasks = async (): Promise<Task[]> => {
     const response = await fetch(API_URL);
