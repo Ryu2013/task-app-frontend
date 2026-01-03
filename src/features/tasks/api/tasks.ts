@@ -4,7 +4,7 @@ import type { Task, CreateTaskDto, UpdateTaskDto } from '../types';
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 // ここで /api を挟む必要があります
-const API_URL = `${BASE_URL}/api/tasks`; 
+const API_URL = `${BASE_URL}/tasks`; 
 
 // 結果: http://12.34.56.78:3000/api/tasks となる
 
